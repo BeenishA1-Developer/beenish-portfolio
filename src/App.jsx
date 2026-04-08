@@ -19,7 +19,7 @@ const DARK = {
   cardHover: "#12182a",
   statBg: "#0e1420",
   pillBg: "#0e1420",
-  shadow: "0 0 32px rgba(0,229,255,0.12)",
+  shadow: "0 8px 32px rgba(0,229,255,0.18)",
   btnShadow: "0 8px 28px rgba(0,229,255,0.25)",
 };
 
@@ -39,7 +39,7 @@ const LIGHT = {
   cardHover: "#f0f4ff",
   statBg: "#edf0f7",
   pillBg: "#edf0f7",
-  shadow: "0 0 32px rgba(0,110,200,0.08)",
+  shadow: "0 8px 32px rgba(0,110,200,0.14)",
   btnShadow: "0 8px 28px rgba(0,110,200,0.2)",
 };
 
@@ -47,6 +47,9 @@ const LIGHT = {
    DATA  (from Portfolio_Content_Plan.md)
 ───────────────────────────────────────────── */
 const EMAIL    = "developerrra1@gmail.com";
+const MAIL_SUBJECT = encodeURIComponent("Portfolio Inquiry - Beenish Ashraf");
+const MAIL_BODY = encodeURIComponent(`Hi Beenish,\n\nI reviewed your portfolio and was exceptionally impressed by your work in modern Web and Android development, especially your real-world client projects.\n\I would love to explore a potential opportunity or project with you.\n\nPlease find more details below:\n\n\n\nLooking forward to connecting!`);
+const MAIL_HREF = `mailto:${EMAIL}?subject=${MAIL_SUBJECT}&body=${MAIL_BODY}`;
 const GITHUB   = "https://github.com/BeenishA1-Developer";
 const LINKEDIN = "https://www.linkedin.com/in/beenish-ashraf-39b613371";
 
@@ -66,24 +69,23 @@ const STATS = [
 ];
 
 const PROJECTS = [
-  { tier:"featured", cat:"ai",      name:"Beenish-AI Scholar Agent",   desc:"Elite autonomous agent suite for scholarship research and SEO automation. Built using advanced agentic workflows and LLM orchestration (GPT-4/Gemini Pro).", stack:["Python","OpenAI API","Gemini API","OS Automation"], live:null, repo:"https://github.com/BeenishA1-Developer/Personal_AI_Agent", isLive:false },
+  { tier:"featured", cat:"client",  name:"Business Nexus Platform",    desc:"Front End Internship project at DevelopersHub Corporation (Certificate: DHC-484). Developed real-world UI components and improved site responsiveness for a dynamic professional networking platform.", stack:["React", "TypeScript", "Tailwind CSS"], live:"https://nexus-iota-five.vercel.app/login", repo:"https://github.com/BeenishA1-Developer/Nexus", isLive:true },
   { tier:"featured", cat:"client",  name:"Bharia Forces Academy",      desc:"Complete real-time educational platform for Pakistani forces test prep. Quiz engine, admin panel, PDF notes, AdSense-ready pages, full SEO. Delivered solo for a real client.", stack:["JavaScript","HTML/CSS","PHP","MySQL"], live:"https://bhariaforcesacademy.com/", repo:"https://github.com/BeenishA1-Developer/bharia-forces-academy", isLive:true  },
   { tier:"featured", cat:"client",  name:"Velvix Time",                desc:"Fully deployed premium luxury timepiece client website with seamless high-end digital experience. Codebase confidential per client NDA.",                                        stack:["HTML","CSS","JavaScript"],             live:"https://velvixtime.wuaze.com/?i=1",                              repo:null,                                                              isLive:true  },
   { tier:"featured", cat:"android", name:"Ramadan Tasbeeh App",        desc:"Advanced spiritual companion app with a persistent digital counter and automated daily resets. Engineered using Jetpack Compose and Room DB with AI-assisted design optimization.", stack:["Kotlin","Jetpack Compose","Room DB","WorkManager"], live:null, repo:"https://github.com/BeenishA1-Developer/RamdanApp", isLive:false },
   { tier:"normal",   cat:"android", name:"Motivator App",              desc:"Feature-rich motivational quotes app built with Jetpack Compose using Room DB for offline storage.",                                                                                stack:["Kotlin","Jetpack Compose","Room DB"],  live:null,                                                             repo:"https://github.com/BeenishA1-Developer/MotivatorApp",             isLive:false },
   { tier:"normal",   cat:"android", name:"Hydro Theme App",            desc:"Android water reminder app with custom fonts and modern Compose UI to help users track daily hydration.",                                                                           stack:["Kotlin","Jetpack Compose"],            live:null,                                                             repo:"https://github.com/BeenishA1-Developer/HydroTheme",              isLive:false },
   { tier:"normal",   cat:"android", name:"Mood Vibes App",             desc:"Sleek mood-based interactive UI app demonstrating complex Jetpack Compose layout architecture.",                                                                                    stack:["Kotlin","Jetpack Compose"],            live:null,                                                             repo:"https://github.com/BeenishA1-Developer/MoodVibes-App",           isLive:false },
-  { tier:"normal",   cat:"android", name:"Login UI App",               desc:"Polished modern login screen architecture using the latest Android UI practices and Compose patterns.",                                                                             stack:["Kotlin","Jetpack Compose"],            live:null,                                                             repo:"https://github.com/BeenishA1-Developer/LoginUIApp",              isLive:false },
   { tier:"normal",   cat:"web",     name:"Luxe Barber",                desc:"Premium modern web experience for a high-end men's grooming and barber shop, built with TypeScript.",                                                                               stack:["TypeScript","HTML","CSS"],             live:null,                                                             repo:"https://github.com/BeenishA1-Developer/BarBer-Site",             isLive:false },
   { tier:"normal",   cat:"web",     name:"GymFit / SJ Beastmode",      desc:"High-energy dynamic landing page for a fitness gym with motivational design elements.",                                                                                             stack:["HTML","CSS","JavaScript"],             live:null,                                                             repo:"https://github.com/BeenishA1-Developer/gymfit-fitness-website",  isLive:false },
   { tier:"normal",   cat:"web",     name:"Sweet Beakers Bakery",       desc:"Complete bakery website with dynamic menu elements and PHP backend integration.",                                                                                                   stack:["PHP","HTML","CSS"],                    live:null,                                                             repo:"https://github.com/BeenishA1-Developer/sweetbeakers-bakery",     isLive:false },
-  { tier:"normal",   cat:"web",     name:"Business Nexus Platform",    desc:"Dynamic professional networking platform connecting entrepreneurs and investors — React & TypeScript.",                                                                              stack:["TypeScript","React"],                  live:null,                                                             repo:"https://github.com/BeenishA1-Developer/Nexus",                   isLive:false },
   { tier:"normal",   cat:"web",     name:"Nexus YouTube Downloader",   desc:"Practical functional web tool allowing users to download YouTube videos directly from the browser.",                                                              stack:["HTML","TypeScript"],                   live:null,                                                             repo:"https://github.com/BeenishA1-Developer/nexus-youtube-downloader",isLive:false },
   { tier:"normal",   cat:"web",     name:"Real Estate Portal",         desc:"Property listing and real estate portal with elegant frontend design and JavaScript-powered filters.",                                                                               stack:["JavaScript","HTML","CSS"],             live:null,                                                             repo:"https://github.com/BeenishA1-Developer/Real-State-Website",      isLive:false },
   { tier:"normal",   cat:"web",     name:"E-Commerce Stores",          desc:"Specialized landing pages and storefronts for Kids Wear and Abaya apparel niches.",                                                                                                 stack:["HTML","CSS","JavaScript"],             live:null,                                                             repo:"https://github.com/BeenishA1-Developer/kids-wear-ecommerce",     isLive:false },
 ];
 
 const EXPERIENCE = [
+  { date:"Feb 2026 — Mar 2026", role:"Front End Development Intern", org:"DevelopersHub Corporation", desc:"Successfully completed a 6-week intensive internship focusing on modern Front End technologies. Worked on real-world UI components, improved site responsiveness, and collaborated with dev team (Certificate ID: DHC-484)." },
   { date:"2022 — Jun 2026",  role:"BSc Computer Science",     org:"GCUF · Government College University Faisalabad",  desc:"Final-year student specializing in web development and AI integration. Delivered multiple real client projects alongside academics." },
   { date:"2023 — Present",   role:"Freelance Web Developer",  org:"A1 Web Solutions · Faisalabad, Pakistan",          desc:"End-to-end delivery of full-stack platforms for local businesses — scoping, development, deployment, SEO. Real clients, real ownership." },
   { date:"2024",             role:"ML Developer (Freelance)", org:"Remote Client Project",                             desc:"Developed a high-accuracy fabric defect detection system (95%) using AI-driven methodologies and MobileNetV2. Optimized for edge deployment." },
@@ -185,12 +187,12 @@ function ProjectCard({ p, t }) {
       style={{
         background: hov ? t.cardHover : t.cardBg,
         border: `1px solid ${hov ? t.borderHover : t.border}`,
-        borderTop: p.tier==="featured" ? `2px solid ${t.accent}` : `1px solid ${hov?t.borderHover:t.border}`,
-        borderRadius:6, padding:"18px",
-        display:"flex", flexDirection:"column", gap:10,
-        transition:"background .22s,border-color .22s,transform .22s,box-shadow .22s",
-        transform: hov ? "translateY(-3px)" : "translateY(0)",
-        boxShadow: hov ? t.shadow : "none",
+        borderTop: p.tier==="featured" ? `3px solid ${t.accent}` : `1px solid ${hov?t.borderHover:t.border}`,
+        borderRadius: "8px", padding:"22px",
+        display:"flex", flexDirection:"column", gap:12,
+        transition:"all .25s cubic-bezier(0.4, 0, 0.2, 1)",
+        transform: hov ? "translateY(-6px)" : "translateY(0)",
+        boxShadow: hov ? t.shadow : "0 4px 20px rgba(0,0,0,0.03)",
         height:"100%",
       }}
     >
@@ -357,7 +359,7 @@ export default function App() {
                 onMouseLeave={e=>e.currentTarget.style.borderColor=t.border}
               >{dark ? <SunIcon/> : <MoonIcon/>}</button>
 
-              <a href={`mailto:${EMAIL}`}
+              <a href={MAIL_HREF}
                 style={{ padding:"8px 16px", background:t.accent, color:dark?"#060810":"#fff", fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:12, letterSpacing:"0.04em", borderRadius:4, display:"flex", alignItems:"center", gap:6, transition:"opacity .2s,transform .2s" }}
                 onMouseEnter={e=>{ e.currentTarget.style.opacity=".85"; e.currentTarget.style.transform="translateY(-1px)"; }}
                 onMouseLeave={e=>{ e.currentTarget.style.opacity="1";   e.currentTarget.style.transform="translateY(0)"; }}
@@ -425,7 +427,7 @@ export default function App() {
                   onMouseEnter={e=>{ e.currentTarget.style.transform="translateY(-2px)"; e.currentTarget.style.boxShadow=t.btnShadow; }}
                   onMouseLeave={e=>{ e.currentTarget.style.transform=""; e.currentTarget.style.boxShadow=""; }}
                 >View My Work →</a>
-                <a href={`mailto:${EMAIL}`}
+                <a href={MAIL_HREF}
                   style={{ padding:"13px 28px", border:`1px solid ${t.border}`, color:t.mutedMid, fontFamily:"'Syne',sans-serif", fontWeight:600, fontSize:13, letterSpacing:"0.04em", borderRadius:5, display:"inline-flex", alignItems:"center", gap:8, transition:"border-color .2s,color .2s" }}
                   onMouseEnter={e=>{ e.currentTarget.style.borderColor=t.accent; e.currentTarget.style.color=t.accent; }}
                   onMouseLeave={e=>{ e.currentTarget.style.borderColor=t.border; e.currentTarget.style.color=t.mutedMid; }}
@@ -436,7 +438,7 @@ export default function App() {
                 {[
                   { href:GITHUB,            icon:<GithubIcon/>,   label:"GitHub"   },
                   { href:LINKEDIN,          icon:<LinkedinIcon/>, label:"LinkedIn" },
-                  { href:`mailto:${EMAIL}`, icon:<MailIcon/>,     label:"Email"    },
+                  { href:MAIL_HREF, icon:<MailIcon/>,     label:"Email"    },
                 ].map(s=>(
                   <a key={s.label} href={s.href} target={s.href.startsWith("http")?"_blank":undefined} rel="noopener noreferrer"
                     style={{ display:"flex", alignItems:"center", gap:6, color:t.muted, fontSize:11, letterSpacing:"0.1em", textTransform:"uppercase", transition:"color .2s" }}
@@ -566,7 +568,7 @@ export default function App() {
               </h2>
             </Reveal>
             <Reveal delay={.12}>
-              <a href={`mailto:${EMAIL}`}
+              <a href={MAIL_HREF}
                 style={{ display:"inline-block", fontSize:"clamp(.95rem,2vw,1.1rem)", color:t.accent, borderBottom:`1px solid rgba(${t.accentRgb},.3)`, paddingBottom:3, marginBottom:44, transition:"border-color .2s" }}
                 onMouseEnter={e=>e.currentTarget.style.borderColor=t.accent}
                 onMouseLeave={e=>e.currentTarget.style.borderColor=`rgba(${t.accentRgb},.3)`}
