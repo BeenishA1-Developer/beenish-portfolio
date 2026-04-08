@@ -268,8 +268,10 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        html,body{width:100%;max-width:100vw;overflow-x:hidden;}
+        #root{width:100%;overflow-x:hidden;}
         html{scroll-behavior:smooth;}
-        body{overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+        body{-webkit-font-smoothing:antialiased;}
         a{text-decoration:none;color:inherit;}
         button{cursor:pointer;border:none;background:none;font-family:inherit;}
 
@@ -345,7 +347,7 @@ export default function App() {
         }
       `}</style>
 
-      <div style={{ "--grad": dark ? "linear-gradient(135deg,#00e5ff,#0090ff)" : "linear-gradient(135deg,#006ec8,#0090ff)", fontFamily:"'Inter',sans-serif", fontWeight:500, background:t.bg, color:t.text, minHeight:"100vh", transition:"background .3s,color .3s" }}>
+      <div style={{ "--grad": dark ? "linear-gradient(135deg,#00e5ff,#0090ff)" : "linear-gradient(135deg,#006ec8,#0090ff)", fontFamily:"'Inter',sans-serif", fontWeight:500, background:t.bg, color:t.text, minHeight:"100vh", overflowX:"hidden", width:"100%", transition:"background .3s,color .3s" }}>
 
         {/* ══ NAV ══════════════════════════════════════ */}
         <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:300, background:t.navBg, backdropFilter:"blur(18px)", borderBottom:`1px solid ${t.border}`, transition:"background .3s" }}>
