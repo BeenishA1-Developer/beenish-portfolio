@@ -39,7 +39,7 @@ const LIGHT = {
   cardHover: "#f0f4ff",
   statBg: "#edf0f7",
   pillBg: "#edf0f7",
-  shadow: "0 8px 32px rgba(0,110,200,0.14)",
+  shadow: "0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,110,200,0.06)",
   btnShadow: "0 8px 28px rgba(0,110,200,0.2)",
 };
 
@@ -336,7 +336,7 @@ export default function App() {
         <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:300, background:t.navBg, backdropFilter:"blur(18px)", borderBottom:`1px solid ${t.border}`, transition:"background .3s" }}>
           <div style={{ ...W, display:"flex", alignItems:"center", justifyContent:"space-between", height:62 }}>
 
-            <span style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, fontSize:16, color:t.accent, letterSpacing:"-0.02em" }}>
+            <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:"italic", fontWeight:400, fontSize:24, color:t.accent, letterSpacing:"0.02em" }}>
               A1<span style={{ color:t.muted }}>.dev</span>
             </span>
 
@@ -414,7 +414,7 @@ export default function App() {
               </p>
 
               <p style={{ fontFamily:"'Instrument Serif',serif", fontStyle:"italic", fontSize:"clamp(1.05rem,2.2vw,1.55rem)", color:t.mutedMid, marginBottom:22, animation:"fadeUp .75s ease .38s both" }}>
-                Multi-Disciplinary Software Developer · Android & Web
+                Professional Web Developer · Frontend Architecture & UI Design
               </p>
 
               <p style={{ maxWidth:510, color:t.muted, fontSize:13, lineHeight:1.95, marginBottom:40, animation:"fadeUp .75s ease .42s both" }}>
