@@ -84,7 +84,7 @@ const PROJECTS = [
 const EXPERIENCE = [
   { date:"2022 — Jun 2026",  role:"BSc Computer Science",     org:"GCUF · Government College University Faisalabad",  desc:"Final-year student specializing in web development and AI integration. Delivered multiple real client projects alongside academics." },
   { date:"2023 — Present",   role:"Freelance Web Developer",  org:"A1 Web Solutions · Faisalabad, Pakistan",          desc:"End-to-end delivery of full-stack platforms for local businesses — scoping, development, deployment, SEO. Real clients, real ownership." },
-  { date:"2024",             role:"ML Developer (Freelance)", org:"Remote Client Project",                             desc:"Built fabric defect detection system (MobileNetV2, 95% accuracy). TFLite-optimized for Raspberry Pi deployment via Google Colab." },
+  { date:"2024",             role:"ML Developer (Freelance)", org:"Remote Client Project",                             desc:"Developed a high-accuracy fabric defect detection system (95%) using AI-driven methodologies and MobileNetV2. Optimized for edge deployment." },
   { date:"2024 — Present",   role:"AI Tools Builder",         org:"Personal & Freelance",                             desc:"AI agents, SEO dashboards, VS Code extensions, and automation tools — Claude API, Gemini API, custom PHP backends." },
 ];
 
@@ -392,11 +392,11 @@ export default function App() {
               </div>
 
               <h1 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(3rem,9.5vw,7.8rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:0.9, color:t.text, marginBottom:14, animation:"fadeUp .75s ease .2s both" }}>
-                Ayesha<br/>
+                Beenish<br/>
                 <span style={{ background:dark?"linear-gradient(135deg,#00e5ff,#0090ff)":"linear-gradient(135deg,#006ec8,#0090ff)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>Ashraf</span>
               </h1>
               <p style={{ fontFamily:"'DM Mono',monospace", fontSize:"clamp(0.7rem,1.4vw,0.85rem)", color:t.muted, letterSpacing:"0.12em", marginBottom:22, animation:"fadeUp .75s ease .28s both" }}>
-                <span style={{ color:t.mutedMid }}>Beenish Ashraf</span>
+                <span style={{ color:t.mutedMid }}>Ayesha Ashraf</span>
                 <span style={{ margin:"0 10px", color:t.border.replace("0.07","0.3") }}>·</span>
                 <span style={{ color:t.accent, fontSize:"0.75em", letterSpacing:"0.2em", textTransform:"uppercase" }}>A1 Web Solutions</span>
               </p>
@@ -585,7 +585,7 @@ export default function App() {
           <div style={{ ...W, padding:"22px 20px" }}>
             <div className="footer-row" style={{ fontSize:11, color:t.muted }}>
               <div>
-                <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, color:t.text, fontSize:13, marginBottom:3 }}>Ayesha <span style={{ color:t.muted, fontWeight:400 }}>(Beenish Ashraf)</span></div>
+                <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, color:t.text, fontSize:13, marginBottom:3 }}>Beenish <span style={{ color:t.muted, fontWeight:400 }}>(Ayesha Ashraf)</span></div>
                 <div>A1 Web Solutions · Faisalabad, Pakistan</div>
               </div>
               <div style={{ textAlign:"right" }}>
