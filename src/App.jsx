@@ -170,7 +170,7 @@ function CatBadge({ cat, t }) {
     ai:      { label:"Built with AI", bg:"rgba(0,229,255,0.1)",     color:t.accent,   border:`rgba(${t.accentRgb},0.4)`  },
   }[cat];
   return (
-    <span style={{ fontSize:9, letterSpacing:"0.16em", textTransform:"uppercase", padding:"3px 9px", borderRadius:3, background:cfg.bg, color:cfg.color, border:`1px solid ${cfg.border}`, fontFamily:"'DM Mono',monospace" }}>
+    <span style={{ fontSize:9, letterSpacing:"0.16em", textTransform:"uppercase", padding:"3px 9px", borderRadius:3, background:cfg.bg, color:cfg.color, border:`1px solid ${cfg.border}`, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>
       {cfg.label}
     </span>
   );
@@ -201,7 +201,7 @@ function ProjectCard({ p, t }) {
         <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
           <CatBadge cat={p.cat} t={t} />
           {p.isLive && (
-            <span style={{ display:"flex", alignItems:"center", gap:5, fontSize:9, color:"#22c55e", letterSpacing:"0.14em", textTransform:"uppercase", fontFamily:"'DM Mono',monospace" }}>
+            <span style={{ display:"flex", alignItems:"center", gap:5, fontSize:9, color:"#22c55e", letterSpacing:"0.14em", textTransform:"uppercase", fontFamily:"'Inter',sans-serif", fontWeight:500 }}>
               <span style={{ width:6, height:6, borderRadius:"50%", background:"#22c55e", display:"inline-block", animation:"pulseDot 1.6s ease-in-out infinite" }} />
               Live
             </span>
@@ -225,13 +225,13 @@ function ProjectCard({ p, t }) {
         </div>
       </div>
       {/* name */}
-      <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:"0.92rem", color:t.text, letterSpacing:"-0.01em", lineHeight:1.3 }}>{p.name}</div>
+      <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:700, fontSize:"0.92rem", color:t.text, letterSpacing:"-0.01em", lineHeight:1.3 }}>{p.name}</div>
       {/* desc */}
       <div style={{ fontSize:11.5, color:t.mutedMid, lineHeight:1.85, flex:1 }}>{p.desc}</div>
       {/* stack */}
       <div style={{ display:"flex", flexWrap:"wrap", gap:5, marginTop:2 }}>
         {p.stack.map(s => (
-          <span key={s} style={{ fontSize:10, color:t.muted, padding:"2px 7px", border:`1px solid ${t.border}`, borderRadius:3, fontFamily:"'DM Mono',monospace" }}>{s}</span>
+          <span key={s} style={{ fontSize:10, color:t.muted, padding:"2px 7px", border:`1px solid ${t.border}`, borderRadius:3, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>{s}</span>
         ))}
       </div>
     </div>
@@ -243,7 +243,7 @@ function ProjectCard({ p, t }) {
 ───────────────────────────────────────────── */
 function SecTag({ label, t }) {
   return (
-    <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:14, fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'DM Mono',monospace" }}>
+    <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:14, fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>
       <span style={{ width:18, height:1, background:t.accent, display:"inline-block" }} />{label}
     </div>
   );
@@ -261,12 +261,12 @@ export default function App() {
   const filtered = PROJECTS.filter(p => filter==="all" || p.cat===filter);
   const NAV = ["Skills","Work","Experience","Contact"];
   const W = { maxWidth:1080, margin:"0 auto", padding:"0 20px" };
-  const H2 = { fontFamily:"'Syne',sans-serif", fontSize:"clamp(1.85rem,4vw,3rem)", fontWeight:800, letterSpacing:"-0.03em", lineHeight:1.1, marginBottom:10, color:t.text };
+  const H2 = { fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:"clamp(1.85rem,4vw,3rem)", fontWeight:800, letterSpacing:"-0.03em", lineHeight:1.1, marginBottom:10, color:t.text };
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
         html{scroll-behavior:smooth;}
         body{overflow-x:hidden;-webkit-font-smoothing:antialiased;}
@@ -345,13 +345,13 @@ export default function App() {
         }
       `}</style>
 
-      <div style={{ "--grad": dark ? "linear-gradient(135deg,#00e5ff,#0090ff)" : "linear-gradient(135deg,#006ec8,#0090ff)", fontFamily:"'DM Mono',monospace", background:t.bg, color:t.text, minHeight:"100vh", transition:"background .3s,color .3s" }}>
+      <div style={{ "--grad": dark ? "linear-gradient(135deg,#00e5ff,#0090ff)" : "linear-gradient(135deg,#006ec8,#0090ff)", fontFamily:"'Inter',sans-serif", fontWeight:500, background:t.bg, color:t.text, minHeight:"100vh", transition:"background .3s,color .3s" }}>
 
         {/* ══ NAV ══════════════════════════════════════ */}
         <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:300, background:t.navBg, backdropFilter:"blur(18px)", borderBottom:`1px solid ${t.border}`, transition:"background .3s" }}>
           <div style={{ ...W, display:"flex", alignItems:"center", justifyContent:"space-between", height:62 }}>
 
-            <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:"italic", fontWeight:400, fontSize:24, color:t.accent, letterSpacing:"0.02em" }}>
+            <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontStyle:"italic", fontWeight:400, fontSize:24, color:t.accent, letterSpacing:"0.02em" }}>
               A1<span style={{ color:t.muted }}>.dev</span>
             </span>
 
@@ -375,7 +375,7 @@ export default function App() {
               >{dark ? <SunIcon/> : <MoonIcon/>}</button>
 
               <a href={MAIL_HREF}
-                style={{ padding:"8px 16px", background:t.accent, color:dark?"#060810":"#fff", fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:12, letterSpacing:"0.04em", borderRadius:4, display:"flex", alignItems:"center", gap:6, transition:"opacity .2s,transform .2s" }}
+                style={{ padding:"8px 16px", background:t.accent, color:dark?"#060810":"#fff", fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:700, fontSize:12, letterSpacing:"0.04em", borderRadius:4, display:"flex", alignItems:"center", gap:6, transition:"opacity .2s,transform .2s" }}
                 onMouseEnter={e=>{ e.currentTarget.style.opacity=".85"; e.currentTarget.style.transform="translateY(-1px)"; }}
                 onMouseLeave={e=>{ e.currentTarget.style.opacity="1";   e.currentTarget.style.transform="translateY(0)"; }}
               ><MailIcon s={12}/> Hire Me</a>
@@ -415,21 +415,21 @@ export default function App() {
 
               <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:22, animation:"fadeUp .7s ease .1s both" }}>
                 <span style={{ width:32, height:1, background:`linear-gradient(90deg,${t.accent},transparent)`, display:"inline-block" }}/>
-                <span style={{ fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'DM Mono',monospace" }}>Available for Freelance</span>
+                <span style={{ fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>Available for Freelance</span>
               </div>
 
-              <h1 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(3rem,9.5vw,7.8rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:0.9, color:t.text, marginBottom:14, animation:"fadeUp .75s ease .2s both" }}>
+              <h1 style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:"clamp(3rem,9.5vw,7.8rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:0.9, color:t.text, marginBottom:14, animation:"fadeUp .75s ease .2s both" }}>
                 Beenish<br/>
                 <span className="grad-text">Ashraf</span>
               </h1>
-              <p style={{ fontFamily:"'DM Mono',monospace", fontSize:"clamp(0.7rem,1.4vw,0.85rem)", color:t.muted, letterSpacing:"0.12em", marginBottom:22, animation:"fadeUp .75s ease .28s both" }}>
+              <p style={{ fontFamily:"'Inter',sans-serif", fontWeight:500, fontSize:"clamp(0.7rem,1.4vw,0.85rem)", color:t.muted, letterSpacing:"0.12em", marginBottom:22, animation:"fadeUp .75s ease .28s both" }}>
                 <span style={{ color:t.mutedMid }}>Ayesha Ashraf</span>
                 <span style={{ margin:"0 10px", color:t.border.replace("0.07","0.3") }}>·</span>
                 <span style={{ color:t.accent, fontSize:"0.75em", letterSpacing:"0.2em", textTransform:"uppercase" }}>A1 Web Solutions</span>
               </p>
 
-              <p style={{ fontFamily:"'Instrument Serif',serif", fontStyle:"italic", fontSize:"clamp(1.05rem,2.2vw,1.55rem)", color:t.mutedMid, marginBottom:22, animation:"fadeUp .75s ease .38s both" }}>
-                Professional Web Developer · Frontend Architecture & UI Design
+              <p style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontStyle:"italic", fontSize:"clamp(1.05rem,2.2vw,1.55rem)", color:t.mutedMid, marginBottom:22, animation:"fadeUp .75s ease .38s both" }}>
+                Professional Website Developer
               </p>
 
               <p style={{ maxWidth:510, color:t.muted, fontSize:13, lineHeight:1.95, marginBottom:40, animation:"fadeUp .75s ease .42s both" }}>
@@ -438,12 +438,12 @@ export default function App() {
 
               <div className="hero-ctas" style={{ marginBottom:50, animation:"fadeUp .75s ease .52s both" }}>
                 <a href="#work"
-                  style={{ padding:"13px 28px", background:t.accent, color:dark?"#060810":"#fff", fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:13, letterSpacing:"0.04em", borderRadius:5, display:"inline-flex", alignItems:"center", gap:8, transition:"transform .2s,box-shadow .2s" }}
+                  style={{ padding:"13px 28px", background:t.accent, color:dark?"#060810":"#fff", fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:700, fontSize:13, letterSpacing:"0.04em", borderRadius:5, display:"inline-flex", alignItems:"center", gap:8, transition:"transform .2s,box-shadow .2s" }}
                   onMouseEnter={e=>{ e.currentTarget.style.transform="translateY(-2px)"; e.currentTarget.style.boxShadow=t.btnShadow; }}
                   onMouseLeave={e=>{ e.currentTarget.style.transform=""; e.currentTarget.style.boxShadow=""; }}
                 >View My Work →</a>
                 <a href={MAIL_HREF}
-                  style={{ padding:"13px 28px", border:`1px solid ${t.border}`, color:t.mutedMid, fontFamily:"'Syne',sans-serif", fontWeight:600, fontSize:13, letterSpacing:"0.04em", borderRadius:5, display:"inline-flex", alignItems:"center", gap:8, transition:"border-color .2s,color .2s" }}
+                  style={{ padding:"13px 28px", border:`1px solid ${t.border}`, color:t.mutedMid, fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:600, fontSize:13, letterSpacing:"0.04em", borderRadius:5, display:"inline-flex", alignItems:"center", gap:8, transition:"border-color .2s,color .2s" }}
                   onMouseEnter={e=>{ e.currentTarget.style.borderColor=t.accent; e.currentTarget.style.color=t.accent; }}
                   onMouseLeave={e=>{ e.currentTarget.style.borderColor=t.border; e.currentTarget.style.color=t.mutedMid; }}
                 ><MailIcon/> Get in Touch</a>
@@ -478,13 +478,13 @@ export default function App() {
                 {SKILLS_DATA.map((sg,i)=>(
                   <Reveal key={sg.label} delay={i*.07}>
                     <div style={{ marginBottom:26 }}>
-                      <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:11, fontSize:10, letterSpacing:"0.17em", textTransform:"uppercase", color:t.muted, fontFamily:"'DM Mono',monospace" }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:11, fontSize:10, letterSpacing:"0.17em", textTransform:"uppercase", color:t.muted, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>
                         {sg.label}<span style={{ flex:1, height:1, background:t.border }}/>
                       </div>
                       <div style={{ display:"flex", flexWrap:"wrap", gap:7 }}>
                         {sg.items.map(item=>(
                           <span key={item}
-                            style={{ padding:"5px 11px", border:`1px solid ${t.border}`, borderRadius:4, fontSize:12, color:t.text, background:t.pillBg, fontFamily:"'DM Mono',monospace", transition:"border-color .2s,color .2s", cursor:"default" }}
+                            style={{ padding:"5px 11px", border:`1px solid ${t.border}`, borderRadius:4, fontSize:12, color:t.text, background:t.pillBg, fontFamily:"'Inter',sans-serif", fontWeight:500, transition:"border-color .2s,color .2s", cursor:"default" }}
                             onMouseEnter={e=>{ e.currentTarget.style.borderColor=t.borderHover; e.currentTarget.style.color=t.accent; }}
                             onMouseLeave={e=>{ e.currentTarget.style.borderColor=t.border;      e.currentTarget.style.color=t.text;  }}
                           >{item}</span>
@@ -503,7 +503,7 @@ export default function App() {
                       onMouseEnter={e=>e.currentTarget.style.background=t.bg}
                       onMouseLeave={e=>e.currentTarget.style.background=t.statBg}
                     >
-                      <div style={{ fontFamily:"'Syne',sans-serif", fontSize:"2.3rem", fontWeight:800, letterSpacing:"-0.04em", color:t.accent, lineHeight:1, marginBottom:7 }}>{s.n}</div>
+                      <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:"2.3rem", fontWeight:800, letterSpacing:"-0.04em", color:t.accent, lineHeight:1, marginBottom:7 }}>{s.n}</div>
                       <div style={{ fontSize:11, color:t.muted, letterSpacing:"0.04em", lineHeight:1.5 }}>{s.label}</div>
                     </div>
                   ))}
@@ -524,7 +524,7 @@ export default function App() {
               <div className="filter-row">
                 {[{key:"all",label:"All Projects"},{key:"ai",label:"Built with AI"},{key:"client",label:"★ Client"},{key:"android",label:"Android"},{key:"web",label:"Web"}].map(f=>(
                   <button key={f.key} onClick={()=>setFilter(f.key)}
-                    style={{ padding:"6px 16px", border:`1px solid ${filter===f.key?t.accent:t.border}`, color:filter===f.key?t.accent:t.muted, background:filter===f.key?`rgba(${t.accentRgb},.07)`:"transparent", fontFamily:"'DM Mono',monospace", fontSize:11, letterSpacing:"0.08em", borderRadius:4, transition:"all .2s" }}
+                    style={{ padding:"6px 16px", border:`1px solid ${filter===f.key?t.accent:t.border}`, color:filter===f.key?t.accent:t.muted, background:filter===f.key?`rgba(${t.accentRgb},.07)`:"transparent", fontFamily:"'Inter',sans-serif", fontWeight:500, fontSize:11, letterSpacing:"0.08em", borderRadius:4, transition:"all .2s" }}
                     onMouseEnter={e=>{ if(filter!==f.key){ e.currentTarget.style.borderColor=t.accent; e.currentTarget.style.color=t.accent; } }}
                     onMouseLeave={e=>{ if(filter!==f.key){ e.currentTarget.style.borderColor=t.border; e.currentTarget.style.color=t.muted;  } }}
                   >{f.label}</button>
@@ -559,9 +559,9 @@ export default function App() {
                     onMouseLeave={ev=>ev.currentTarget.style.borderColor=t.border}
                   >
                     <span style={{ width:9, height:9, borderRadius:"50%", border:`2px solid ${t.accent}`, background:t.bg, position:"absolute", left:-5.5, top:3, display:"block" }}/>
-                    <div style={{ fontSize:10, color:t.muted, letterSpacing:"0.1em", marginBottom:6, fontFamily:"'DM Mono',monospace" }}>{e.date}</div>
-                    <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, fontSize:"0.95rem", color:t.text, marginBottom:4 }}>{e.role}</div>
-                    <div style={{ fontSize:12, color:t.accent, marginBottom:10, fontFamily:"'DM Mono',monospace" }}>{e.org}</div>
+                    <div style={{ fontSize:10, color:t.muted, letterSpacing:"0.1em", marginBottom:6, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>{e.date}</div>
+                    <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:700, fontSize:"0.95rem", color:t.text, marginBottom:4 }}>{e.role}</div>
+                    <div style={{ fontSize:12, color:t.accent, marginBottom:10, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>{e.org}</div>
                     <div style={{ fontSize:12, color:t.mutedMid, lineHeight:1.85 }}>{e.desc}</div>
                   </div>
                 </Reveal>
@@ -573,13 +573,13 @@ export default function App() {
         {/* ══ CONTACT ══════════════════════════════════ */}
         <section id="contact" className="sec" style={{ background:t.bg, transition:"background .3s" }}>
           <div style={{ ...W, textAlign:"center" }}>
-            <Reveal><div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:8, marginBottom:14, fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'DM Mono',monospace" }}>
+            <Reveal><div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:8, marginBottom:14, fontSize:10, letterSpacing:"0.22em", textTransform:"uppercase", color:t.accent, fontFamily:"'Inter',sans-serif", fontWeight:500 }}>
               <span style={{ width:18, height:1, background:t.accent, display:"inline-block" }}/>Let's Connect
             </div></Reveal>
             <Reveal delay={.06}>
-              <h2 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(2.4rem,6.5vw,5.5rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:1.02, marginBottom:18, color:t.text }}>
+              <h2 style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontSize:"clamp(2.4rem,6.5vw,5.5rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:1.02, marginBottom:18, color:t.text }}>
                 Got a project?<br/>
-                <span style={{ fontFamily:"'Instrument Serif',serif", fontStyle:"italic", fontWeight:400, color:t.muted }}>Let's talk.</span>
+                <span style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontStyle:"italic", fontWeight:400, color:t.muted }}>Let's talk.</span>
               </h2>
             </Reveal>
             <Reveal delay={.12}>
@@ -597,7 +597,7 @@ export default function App() {
                   { href:"https://bhariaforcesacademy.com", icon:<ExternalIcon/>, label:"Live Work"},
                 ].map(l=>(
                   <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
-                    style={{ display:"inline-flex", alignItems:"center", gap:7, padding:"10px 20px", border:`1px solid ${t.border}`, color:t.muted, borderRadius:4, fontSize:12, fontFamily:"'DM Mono',monospace", letterSpacing:"0.05em", transition:"border-color .2s,color .2s" }}
+                    style={{ display:"inline-flex", alignItems:"center", gap:7, padding:"10px 20px", border:`1px solid ${t.border}`, color:t.muted, borderRadius:4, fontSize:12, fontFamily:"'Inter',sans-serif", fontWeight:500, letterSpacing:"0.05em", transition:"border-color .2s,color .2s" }}
                     onMouseEnter={e=>{ e.currentTarget.style.borderColor=t.accent; e.currentTarget.style.color=t.accent; }}
                     onMouseLeave={e=>{ e.currentTarget.style.borderColor=t.border; e.currentTarget.style.color=t.muted;  }}
                   >{l.icon} {l.label}</a>
@@ -612,7 +612,7 @@ export default function App() {
           <div style={{ ...W, padding:"22px 20px" }}>
             <div className="footer-row" style={{ fontSize:11, color:t.muted }}>
               <div>
-                <div style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, color:t.text, fontSize:13, marginBottom:3 }}>Beenish <span style={{ color:t.muted, fontWeight:400 }}>(Ayesha Ashraf)</span></div>
+                <div style={{ fontFamily:"'Plus Jakarta Sans',sans-serif", fontWeight:700, color:t.text, fontSize:13, marginBottom:3 }}>Beenish <span style={{ color:t.muted, fontWeight:400 }}>(Ayesha Ashraf)</span></div>
                 <div>A1 Web Solutions · Faisalabad, Pakistan</div>
               </div>
               <div style={{ textAlign:"right" }}>
