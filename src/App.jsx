@@ -278,21 +278,36 @@ export default function App() {
         @keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
         @keyframes floatB{0%,100%{transform:translateY(-12px)}50%{transform:translateY(12px)}}
 
-        /* ── PROJECT GRID
-           ≥ 901px  → 3 columns
-           ≤ 900px  → 2 columns   (tablet)
-           ≤ 480px  → 2 columns   (mobile — KEY REQUIREMENT)
-        */
+        /* ── PROJECT GRID ── */
         .proj-grid{
           display:grid;
           grid-template-columns:repeat(3,1fr);
-          gap:14px;
+          gap:20px;
         }
-        @media(max-width:900px){
+        @media(max-width:960px){
           .proj-grid{grid-template-columns:repeat(2,1fr);}
         }
-        @media(max-width:480px){
-          .proj-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+        @media(max-width:680px){
+          .proj-grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 16px;
+            padding-bottom: 24px;
+            margin-right: -20px;
+            padding-right: 20px;
+            -webkit-overflow-scrolling: touch;
+            /* Hide scrollbar for a cleaner look */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+          .proj-grid::-webkit-scrollbar {
+            display: none;
+          }
+          .proj-grid > div {
+            min-width: 85vw;
+            scroll-snap-align: center;
+          }
         }
 
         .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
