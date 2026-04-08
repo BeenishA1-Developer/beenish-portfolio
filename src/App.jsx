@@ -66,8 +66,10 @@ const STATS = [
 ];
 
 const PROJECTS = [
+  { tier:"featured", cat:"ai",      name:"Beenish-AI Scholar Agent",   desc:"Elite autonomous agent suite for scholarship research and SEO automation. Built using advanced agentic workflows and LLM orchestration (GPT-4/Gemini Pro).", stack:["Python","OpenAI API","Gemini API","OS Automation"], live:null, repo:"https://github.com/BeenishA1-Developer/Personal_AI_Agent", isLive:false },
   { tier:"featured", cat:"client",  name:"Bharia Forces Academy",      desc:"Complete real-time educational platform for Pakistani forces test prep. Quiz engine, admin panel, PDF notes, AdSense-ready pages, full SEO. Delivered solo for a real client.", stack:["JavaScript","HTML/CSS","PHP","MySQL"], live:"https://bhariaforcesacademy.com/", repo:"https://github.com/BeenishA1-Developer/bharia-forces-academy", isLive:true  },
   { tier:"featured", cat:"client",  name:"Velvix Time",                desc:"Fully deployed premium luxury timepiece client website with seamless high-end digital experience. Codebase confidential per client NDA.",                                        stack:["HTML","CSS","JavaScript"],             live:"https://velvixtime.wuaze.com/?i=1",                              repo:null,                                                              isLive:true  },
+  { tier:"featured", cat:"android", name:"Ramadan Tasbeeh App",        desc:"Advanced spiritual companion app with a persistent digital counter and automated daily resets. Engineered using Jetpack Compose and Room DB with AI-assisted design optimization.", stack:["Kotlin","Jetpack Compose","Room DB","WorkManager"], live:null, repo:"https://github.com/BeenishA1-Developer/RamdanApp", isLive:false },
   { tier:"normal",   cat:"android", name:"Motivator App",              desc:"Feature-rich motivational quotes app built with Jetpack Compose using Room DB for offline storage.",                                                                                stack:["Kotlin","Jetpack Compose","Room DB"],  live:null,                                                             repo:"https://github.com/BeenishA1-Developer/MotivatorApp",             isLive:false },
   { tier:"normal",   cat:"android", name:"Hydro Theme App",            desc:"Android water reminder app with custom fonts and modern Compose UI to help users track daily hydration.",                                                                           stack:["Kotlin","Jetpack Compose"],            live:null,                                                             repo:"https://github.com/BeenishA1-Developer/HydroTheme",              isLive:false },
   { tier:"normal",   cat:"android", name:"Mood Vibes App",             desc:"Sleek mood-based interactive UI app demonstrating complex Jetpack Compose layout architecture.",                                                                                    stack:["Kotlin","Jetpack Compose"],            live:null,                                                             repo:"https://github.com/BeenishA1-Developer/MoodVibes-App",           isLive:false },
@@ -163,6 +165,7 @@ function CatBadge({ cat, t }) {
     client:  { label:"★ Client",  bg:`rgba(${t.accentRgb},.1)`,  color:t.accent,   border:`rgba(${t.accentRgb},.25)` },
     android: { label:"Android",   bg:"rgba(124,58,237,.1)",        color:"#a78bfa",  border:"rgba(124,58,237,.25)"      },
     web:     { label:"Web",       bg:"rgba(244,114,182,.1)",       color:"#f472b6",  border:"rgba(244,114,182,.25)"     },
+    ai:      { label:"Built with AI", bg:"rgba(0,229,255,0.1)",     color:t.accent,   border:`rgba(${t.accentRgb},0.4)`  },
   }[cat];
   return (
     <span style={{ fontSize:9, letterSpacing:"0.16em", textTransform:"uppercase", padding:"3px 9px", borderRadius:3, background:cfg.bg, color:cfg.color, border:`1px solid ${cfg.border}`, fontFamily:"'DM Mono',monospace" }}>
@@ -502,7 +505,7 @@ export default function App() {
 
             <Reveal delay={.12}>
               <div className="filter-row">
-                {[{key:"all",label:"All Projects"},{key:"client",label:"★ Client"},{key:"android",label:"Android"},{key:"web",label:"Web"}].map(f=>(
+                {[{key:"all",label:"All Projects"},{key:"ai",label:"Built with AI"},{key:"client",label:"★ Client"},{key:"android",label:"Android"},{key:"web",label:"Web"}].map(f=>(
                   <button key={f.key} onClick={()=>setFilter(f.key)}
                     style={{ padding:"6px 16px", border:`1px solid ${filter===f.key?t.accent:t.border}`, color:filter===f.key?t.accent:t.muted, background:filter===f.key?`rgba(${t.accentRgb},.07)`:"transparent", fontFamily:"'DM Mono',monospace", fontSize:11, letterSpacing:"0.08em", borderRadius:4, transition:"all .2s" }}
                     onMouseEnter={e=>{ if(filter!==f.key){ e.currentTarget.style.borderColor=t.accent; e.currentTarget.style.color=t.accent; } }}
