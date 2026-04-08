@@ -393,7 +393,14 @@ export default function App() {
 
               <h1 style={{ fontFamily:"'Syne',sans-serif", fontSize:"clamp(3rem,9.5vw,7.8rem)", fontWeight:800, letterSpacing:"-0.04em", lineHeight:0.9, color:t.text, marginBottom:14, animation:"fadeUp .75s ease .2s both" }}>
                 Beenish<br/>
-                <span style={{ background:dark?"linear-gradient(135deg,#00e5ff,#0090ff)":"linear-gradient(135deg,#006ec8,#0090ff)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>Ashraf</span>
+                <span style={{ 
+                  background: dark ? "linear-gradient(135deg,#00e5ff,#0090ff)" : "linear-gradient(135deg,#006ec8,#0090ff)", 
+                  WebkitBackgroundClip: "text", 
+                  WebkitTextFillColor: "transparent", 
+                  backgroundClip: "text", 
+                  color: "transparent",
+                  display: "inline-block" 
+                }}>Ashraf</span>
               </h1>
               <p style={{ fontFamily:"'DM Mono',monospace", fontSize:"clamp(0.7rem,1.4vw,0.85rem)", color:t.muted, letterSpacing:"0.12em", marginBottom:22, animation:"fadeUp .75s ease .28s both" }}>
                 <span style={{ color:t.mutedMid }}>Ayesha Ashraf</span>
